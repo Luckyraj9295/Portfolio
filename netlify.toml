@@ -5,7 +5,3 @@
 
 [build.environment]
   NPM_FLAGS = "--legacy-peer-deps"
-
-[env]
-  [env.production]
-    RESEND_API_KEY = "placeholder"
