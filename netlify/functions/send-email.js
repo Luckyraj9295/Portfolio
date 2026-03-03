@@ -1,22 +1,18 @@
 /* globals process */
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'Content-Type',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS'
-};
-
 export default async function handler(event) {
-  console.log('Function invoked with event:', event);
+  console.log('=== FUNCTION START ===');
+  console.log('HTTP Method:', event.httpMethod);
+  console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
   
   // Handle OPTIONS requests
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,
-      headers: corsHeaders,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS'
+      },
       body: 'OK'
     };
   }
@@ -25,12 +21,16 @@ export default async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
-      headers: corsHeaders,
       body: JSON.stringify({ error: 'Method not allowed' })
     };
   }
 
   try {
+    // Import Resend
+    const { Resend } = await import('resend');
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    console.log('Resend initialized');
     console.log('Parsing body:', event.body);
     const { name, email, message } = JSON.parse(event.body);
 
@@ -38,7 +38,6 @@ export default async function handler(event) {
     if (!name || !email || !message) {
       return {
         statusCode: 400,
-        headers: corsHeaders,
         body: JSON.stringify({ error: 'Missing required fields' })
       };
     }
@@ -64,15 +63,19 @@ export default async function handler(event) {
 
     return {
       statusCode: 200,
-      headers: corsHeaders,
       body: JSON.stringify({ success: true, message: 'Email sent successfully' })
     };
   } catch (error) {
-    console.error('Resend error:', error);
+    console.error('=== ERROR ===');
+    console.error('Error message:', error.message);
+    console.error('Error stack:', error.stack);
+    console.error('Full error:', error);
     return {
       statusCode: 500,
-      headers: corsHeaders,
-      body: JSON.stringify({ error: error.message || 'Failed to send email', details: error.toString() })
+      body: JSON.stringify({ 
+        error: error.message || 'Failed to send email', 
+        details: error.toString()
+      })
     };
   }
 }
