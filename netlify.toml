@@ -3,6 +3,9 @@
   functions = "netlify/functions"
   publish = "dist"
 
+[build.environment]
+  NPM_FLAGS = "--legacy-peer-deps"
+
 [env]
   [env.production]
     [env.production.context.production.environment]
