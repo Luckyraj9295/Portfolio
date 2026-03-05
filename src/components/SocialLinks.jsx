@@ -48,12 +48,13 @@ const socialLinks = [
     displayName: "GeeksForGeeks",
     subText: "thatslucky",
     icon: () => (
-    <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg width="24px" height="24px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
     <title>GeeksForGeeks</title>
-    <g fill="none">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="#2F8D46"/>
-        <path d="M8.5 9c-.83 0-1.5.67-1.5 1.5v3c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-3c0-.83-.67-1.5-1.5-1.5zm7 0c-.83 0-1.5.67-1.5 1.5v3c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-3c0-.83-.67-1.5-1.5-1.5zM12 9c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1z" fill="#FFFFFF"/>
-    </g>
+    <rect width="256" height="256" rx="30" fill="#2F8D46"/>
+    <path d="M78.5 128c-11.5 0-20.8 9.3-20.8 20.8v41.7c0 11.5 9.3 20.8 20.8 20.8s20.8-9.3 20.8-20.8v-41.7c0-11.5-9.3-20.8-20.8-20.8zm99 0c-11.5 0-20.8 9.3-20.8 20.8v41.7c0 11.5 9.3 20.8 20.8 20.8s20.8-9.3 20.8-20.8v-41.7c0-11.5-9.3-20.8-20.8-20.8z" fill="#FFF"/>
+    <circle cx="78.5" cy="85" r="12" fill="#FFF"/>
+    <circle cx="177.5" cy="85" r="12" fill="#FFF"/>
+    <path d="M128 103c-9.5 0-17.2 7.7-17.2 17.2v51.6c0 9.5 7.7 17.2 17.2 17.2s17.2-7.7 17.2-17.2v-51.6c0-9.5-7.7-17.2-17.2-17.2z" fill="#FFF"/>
 </svg>
     ),
     url: "https://www.geeksforgeeks.org/profile/thatslucky",
