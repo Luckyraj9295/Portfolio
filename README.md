@@ -14,7 +14,7 @@ Modern personal portfolio website with project/certificate showcase, Firebase-po
 🌐 Live Application
 
 Link:
-https://thatsluckyy.netlify.app/
+https://thatsluckyy.netlify.app
 
 ## Features
 
