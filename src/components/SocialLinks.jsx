@@ -47,11 +47,12 @@ const socialLinks = [
     name: "GeeksForGeeks",
     displayName: "GeeksForGeeks",
     subText: "thatslucky",
+    isImageIcon: true,
     icon: ({ className }) => (
     <img
-      src="https://img.icons8.com/color/1200/GeeksforGeeks.jpg"
+      src="https://cdn.brandfetch.io/idw2s-0Tuo/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B"
       alt="GeeksForGeeks"
-      className={className}
+      className={`${className} object-contain`}
     />
     ),
     url: "https://www.geeksforgeeks.org/profile/thatslucky",
@@ -151,11 +152,11 @@ const SocialLinks = () => {
               <div className="relative flex items-center justify-center">
                 <div className="absolute inset-0 opacity-20 rounded-lg transition-all duration-500
                                group-hover:scale-125 group-hover:opacity-30"
-                     style={{ backgroundColor: link.color }} />
+                     style={{ backgroundColor: link.isImageIcon ? "#ffffff" : link.color }} />
                 <div className="relative p-2 rounded-lg">
                   <link.icon
-                    className="w-5 h-5 transition-all duration-500 group-hover:scale-110"
-                    style={{ color: link.color }}
+                    className={`${link.isImageIcon ? "w-6 h-6" : "w-5 h-5"} transition-all duration-500 group-hover:scale-110`}
+                    style={link.isImageIcon ? undefined : { color: link.color }}
                   />
                 </div>
               </div>
