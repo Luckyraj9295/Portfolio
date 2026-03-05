@@ -47,14 +47,12 @@ const socialLinks = [
     name: "GeeksForGeeks",
     displayName: "GeeksForGeeks",
     subText: "thatslucky",
-    icon: () => (
-    <svg width="24px" height="24px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <title>GeeksForGeeks</title>
-    <rect width="100" height="100" fill="#2F8D46"/>
-    <text x="50" y="40" fontFamily="Verdana, sans-serif" fontSize="18" fontWeight="bold" fill="#FFFFFF" textAnchor="middle">Geeks</text>
-    <text x="50" y="58" fontFamily="Verdana, sans-serif" fontSize="12" fontWeight="normal" fill="#FFFFFF" textAnchor="middle">for</text>
-    <text x="50" y="78" fontFamily="Verdana, sans-serif" fontSize="18" fontWeight="bold" fill="#FFFFFF" textAnchor="middle">Geeks</text>
-</svg>
+    icon: ({ className }) => (
+    <img
+      src="https://img.icons8.com/color/1200/GeeksforGeeks.jpg"
+      alt="GeeksForGeeks"
+      className={className}
+    />
     ),
     url: "https://www.geeksforgeeks.org/profile/thatslucky",
     color: "#2F8D46",
