@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Award, Layers, Package } from "lucide-react";
+import { ArrowLeft, ExternalLink, Award, Layers, Package, Building2, Calendar } from "lucide-react";
 
 import { db, collection, getDocs } from "../firebase";
 import Swal from 'sweetalert2';
@@ -148,18 +148,28 @@ export default function InternshipDetail() {
             </div>
           </div>
 
-          {/* Organization and Duration */}
+          {/* Organization and Duration (with icons) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {internship.Organization && (
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
-                <p className="text-gray-400 text-sm mb-2">Organization</p>
-                <p className="text-white font-semibold">{internship.Organization}</p>
+              <div className="relative z-10 flex items-center space-x-2 md:space-x-3 bg-white/5 p-4 rounded-xl border border-blue-500/20 hover:border-blue-500/30 transition-all duration-300">
+                <div className="bg-blue-500/20 p-2 rounded-full">
+                  <Building2 className="text-blue-300 w-5 h-5 md:w-6 md:h-6" strokeWidth={1.5} />
+                </div>
+                <div className="flex-grow">
+                  <div className="text-base md:text-lg font-semibold text-blue-200">{internship.Organization}</div>
+                  <div className="text-xs text-gray-400">Organization</div>
+                </div>
               </div>
             )}
             {internship.Duration && (
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
-                <p className="text-gray-400 text-sm mb-2">Duration</p>
-                <p className="text-white font-semibold">{internship.Duration}</p>
+              <div className="relative z-10 flex items-center space-x-2 md:space-x-3 bg-white/5 p-4 rounded-xl border border-cyan-500/20 hover:border-cyan-500/30 transition-all duration-300">
+                <div className="bg-cyan-500/20 p-2 rounded-full">
+                  <Calendar className="text-cyan-300 w-5 h-5 md:w-6 md:h-6" strokeWidth={1.5} />
+                </div>
+                <div className="flex-grow">
+                  <div className="text-base md:text-lg font-semibold text-cyan-200">{internship.Duration}</div>
+                  <div className="text-xs text-gray-400">Duration</div>
+                </div>
               </div>
             )}
           </div>
