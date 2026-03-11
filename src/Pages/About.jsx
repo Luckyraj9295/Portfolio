@@ -193,7 +193,7 @@ const AboutPage = () => {
         label: "Year of Study",
         description: "B.tech Computer Science",
         animation: "fade-left",
-        targetTab: 3,
+        targetTab: 1,
       },
     ],
     [totalProjects, totalCertificates, YearExperience]
@@ -257,7 +257,18 @@ const AboutPage = () => {
                   <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
                 </button>
               </a>
-              <a href="#Portofolio" className="w-full lg:w-auto">
+              <a
+                href="#Portofolio"
+                className="w-full lg:w-auto"
+                onClick={() => {
+                  localStorage.setItem("portfolioActiveTab", "0");
+                  window.dispatchEvent(
+                    new CustomEvent("portfolio-tab-change", {
+                      detail: { tab: 0 },
+                    })
+                  );
+                }}
+              >
                 <button
                   data-aos="fade-up"
                   data-aos-duration="1000"
