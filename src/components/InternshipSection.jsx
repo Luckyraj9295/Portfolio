@@ -19,6 +19,8 @@ const InternshipSection = ({ initialItems = 6 }) => {
 					...doc.data(),
 				}));
 				setInternships(internshipData);
+				// Store in localStorage for both cards and details page
+				localStorage.setItem("internships", JSON.stringify(internshipData));
 			} catch (error) {
 				console.error("Error fetching internships:", error);
 			}

@@ -38,13 +38,36 @@ export default function InternshipDetail() {
   const [internship, setInternship] = useState(undefined);
 
   useEffect(() => {
+    // Try to get internships from localStorage first
+    const cached = localStorage.getItem("internships");
+    let cachedInternships = [];
+    if (cached) {
+      try {
+        cachedInternships = JSON.parse(cached);
+        const found = cachedInternships.find((item) => item.id === id);
+        if (found) {
+          setInternship(found);
+        }
+      } catch (e) {
+        cachedInternships = [];
+      }
+    }
+    // Always fetch from Firebase and merge with cache
     const fetchInternship = async () => {
       try {
         const internshipCollection = collection(db, "internships");
         const snapshot = await getDocs(internshipCollection);
-        const found = snapshot.docs.find((doc) => doc.id === id);
+        const fetchedInternships = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        // Merge old and new, deduplicate by id
+        const allInternshipsMap = {};
+        [...cachedInternships, ...fetchedInternships].forEach(item => {
+          allInternshipsMap[item.id] = item;
+        });
+        const allInternships = Object.values(allInternshipsMap);
+        localStorage.setItem("internships", JSON.stringify(allInternships));
+        const found = allInternships.find((item) => item.id === id);
         if (found) {
-          setInternship({ id: found.id, ...found.data() });
+          setInternship(found);
         } else {
           setInternship(null);
         }
