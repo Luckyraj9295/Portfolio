@@ -10,6 +10,17 @@ const InternshipSection = ({ initialItems = 6 }) => {
 	const itemsToShow = isMobile ? 4 : initialItems;
 
 	useEffect(() => {
+		// Show cached internships instantly if available
+		const cached = localStorage.getItem("internships");
+		if (cached) {
+			try {
+				const internships = JSON.parse(cached);
+				setInternships(internships);
+			} catch {
+				// Ignore parse errors
+			}
+		}
+		// Always fetch latest from Firebase in background
 		const fetchInternships = async () => {
 			try {
 				const internshipCollection = collection(db, "internships");
@@ -19,7 +30,6 @@ const InternshipSection = ({ initialItems = 6 }) => {
 					...doc.data(),
 				}));
 				setInternships(internshipData);
-				// Store in localStorage for both cards and details page
 				localStorage.setItem("internships", JSON.stringify(internshipData));
 			} catch (error) {
 				console.error("Error fetching internships:", error);
