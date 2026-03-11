@@ -255,7 +255,8 @@ export default function FullWidthTabs() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             borderRadius: "20px",
             position: "relative",
-            overflow: "hidden",
+            overflow: "auto",
+            minWidth: 0,
             "&::before": {
               content: '""',
               position: "absolute",
@@ -268,28 +269,29 @@ export default function FullWidthTabs() {
               zIndex: 0,
             },
           }}
-          className="md:px-4"
+          className="md:px-4 px-1"
         >
-          {/* Tabs remain unchanged */}
           <Tabs
             value={value}
             onChange={handleChange}
             textColor="secondary"
             indicatorColor="secondary"
-            variant="fullWidth"
+            variant="scrollable"
+            scrollButtons="auto"
+            allowScrollButtonsMobile
             sx={{
-              // Existing styles remain unchanged
-              minHeight: "70px",
+              minHeight: { xs: "48px", md: "70px" },
               "& .MuiTab-root": {
-                fontSize: { xs: "0.9rem", md: "1rem" },
-                fontWeight: "600",
+                fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" },
+                fontWeight: 600,
                 color: "#94a3b8",
                 textTransform: "none",
                 transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                padding: "20px 0",
+                padding: { xs: "10px 0", md: "20px 0" },
                 zIndex: 1,
-                margin: "8px",
+                margin: { xs: "4px", md: "8px" },
                 borderRadius: "12px",
+                minWidth: 90,
                 "&:hover": {
                   color: "#ffffff",
                   backgroundColor: "rgba(139, 92, 246, 0.1)",
@@ -311,7 +313,7 @@ export default function FullWidthTabs() {
                 height: 0,
               },
               "& .MuiTabs-flexContainer": {
-                gap: "8px",
+                gap: { xs: "2px", md: "8px" },
               },
             }}
           >

@@ -48,7 +48,7 @@ export default function InternshipDetail() {
         if (found) {
           setInternship(found);
         }
-      } catch (e) {
+      } catch {
         cachedInternships = [];
       }
     }
