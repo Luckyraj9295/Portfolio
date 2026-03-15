@@ -97,7 +97,7 @@ const PAUSE_DURATION = 2000;
 const WORDS = ["3rd Year B.Tech Student", "Tech Enthusiast", "Web Developer"];
 const TECH_STACK = ["React", "Node.js", "Cloud Computing", "MySQL"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/Luckyraj9295" },
+  { icon: Github, link: "https://github.com/luckycodebase" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/lucky-kumar-3a4630289/" },
   { icon: Instagram, link: "https://www.instagram.com/thatsluckyy_" },
 ];

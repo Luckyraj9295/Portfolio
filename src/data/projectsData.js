@@ -8,7 +8,7 @@ export const projectsData = [
     Description: "A modern, responsive portfolio website built with React, Tailwind CSS, and Vite. Features smooth animations, dark theme, and dynamic content.",
     Img: "/project1.jpg", // Add your project images to the public folder
     Link: "https://your-portfolio-url.com",
-    Github: "https://github.com/Luckyraj9295/portfolio",
+    Github: "https://github.com/luckycodebase/portfolio",
     TechStack: ["React", "Tailwind CSS", "Vite", "JavaScript"],
     Features: [
       "Responsive design for all devices",
@@ -25,7 +25,7 @@ export const projectsData = [
   //   Description: "Description here",
   //   Img: "/project2.jpg",
   //   Link: "https://your-demo-url.com",
-  //   Github: "https://github.com/Luckyraj9295/your-repo",
+  //   Github: "https://github.com/luckycodebase/your-repo",
   //   TechStack: ["React", "Node.js", "MongoDB"],
   //   Features: [
   //     "Feature 1",

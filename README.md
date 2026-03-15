@@ -1,9 +1,9 @@
 # Lucky Portfolio (React + Vite)
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Luckyraj9295%2FPortfolio-181717?logo=github)](https://github.com/Luckyraj9295/Portfolio)
-[![Last Commit](https://img.shields.io/github/last-commit/Luckyraj9295/Portfolio)](https://github.com/Luckyraj9295/Portfolio/commits/main)
-[![Top Language](https://img.shields.io/github/languages/top/Luckyraj9295/Portfolio)](https://github.com/Luckyraj9295/Portfolio)
-[![Stars](https://img.shields.io/github/stars/Luckyraj9295/Portfolio?style=social)](https://github.com/Luckyraj9295/Portfolio/stargazers)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Luckyraj9295%2FPortfolio-181717?logo=github)](https://github.com/luckycodebase/Portfolio)
+[![Last Commit](https://img.shields.io/github/last-commit/Luckyraj9295/Portfolio)](https://github.com/luckycodebase/Portfolio/commits/main)
+[![Top Language](https://img.shields.io/github/languages/top/Luckyraj9295/Portfolio)](https://github.com/luckycodebase/Portfolio)
+[![Stars](https://img.shields.io/github/stars/Luckyraj9295/Portfolio?style=social)](https://github.com/luckycodebase/Portfolio/stargazers)
 [![Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?logo=netlify&logoColor=white)](https://www.thatsluckyy.netlify.com)
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
@@ -59,7 +59,7 @@ netlify/
 1. Clone repository
 
 ```bash
-git clone https://github.com/Luckyraj9295/Portfolio.git
+git clone https://github.com/luckycodebase/Portfolio.git
 cd "Portofolio Update 2"
 ```
 
