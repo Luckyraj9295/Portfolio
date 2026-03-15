@@ -1,10 +1,10 @@
 # Lucky Portfolio (React + Vite)
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Luckyraj9295%2FPortfolio-181717?logo=github)](https://github.com/luckycodebase/Portfolio)
-[![Last Commit](https://img.shields.io/github/last-commit/Luckyraj9295/Portfolio)](https://github.com/luckycodebase/Portfolio/commits/main)
-[![Top Language](https://img.shields.io/github/languages/top/Luckyraj9295/Portfolio)](https://github.com/luckycodebase/Portfolio)
-[![Stars](https://img.shields.io/github/stars/Luckyraj9295/Portfolio?style=social)](https://github.com/luckycodebase/Portfolio/stargazers)
-[![Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?logo=netlify&logoColor=white)](https://www.thatsluckyy.netlify.com)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-luckycodebase%2FPortfolio-181717?logo=github)](https://github.com/luckycodebase/Portfolio)
+[![Last Commit](https://img.shields.io/github/last-commit/luckycodebase/Portfolio)](https://github.com/luckycodebase/Portfolio/commits/main)
+[![Top Language](https://img.shields.io/github/languages/top/luckycodebase/Portfolio)](https://github.com/luckycodebase/Portfolio)
+[![Stars](https://img.shields.io/github/stars/luckycodebase/Portfolio?style=social)](https://github.com/luckycodebase/Portfolio/stargazers)
+[![Netlify](https://img.shields.io/badge/Deployed%20on-Netlify-00C7B7?logo=netlify&logoColor=white)](https://luckydev.netlify.app/)
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
 [![Firebase](https://img.shields.io/badge/Firebase-Firestore-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com)
@@ -14,7 +14,7 @@ Modern personal portfolio website with project/certificate showcase, Firebase-po
 🌐 Live Application
 
 Link:
-https://thatsluckyy.netlify.app
+https://luckydev.netlify.app/
 
 ## Features
 
